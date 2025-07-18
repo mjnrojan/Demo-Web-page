@@ -132,15 +132,14 @@ header{
     border-top-left-radius: 10px;
 }
 
-
-.text-sci h1{
+.content .text-sci h1{
     font-size: 40px;
     line-height: 1;
 }  
 
 
 
-.text-sci p {
+.content .text-sci p {
     font-size: 16px;
     margin: 20px 0;
 }
@@ -194,7 +193,7 @@ header{
 #contact {
   scroll-margin-top: 1px; /* Adjust this value to match your header height */
   min-height: 100vh;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .about-container{
@@ -238,6 +237,7 @@ header{
 .about-text p {
     color: #010101;
     font-size:14px ;
+    font-weight: 400;
     margin: 20px 0;
 
 }
@@ -285,47 +285,350 @@ header{
 }
 
 .services-container .services-content{
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     padding: 80px;   
+    transform: translateY(0%);
 }
-.service-content h1{
+.services-content h1{
     font-size: 50px;
+    color: yellowgreen;
     line-height: 1;
+    transform: translateY(-50%);
 }
+
+.services-content h3{
+    font-size: 20px;
+    color: yellowgreen;
+    line-height: 3;
+
+}
+
+.services-content p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
 
 .services-content .scroll-container{
+    display: flex;
+    overflow-x: auto;
+    gap: 1.2rem;
+    height: 75%;
+    scroll-behavior: smooth;
+    padding: 0.5rem;
+    scroll-snap-type: x mandatory ;
+    justify-content: flex-start;
+    /* border: 2px solid yellowgreen; */
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
 
 }
 
+.scroll-container .card{
+    top: 0;
+    left: 0;
+    width: 300px;
+    
+    height: 100%;
+    flex-shrink: 0;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid yellowgreen;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+}
+.scroll-buttons {
+    position: absolute;
+    padding-left: 80px;
+    left: 0;
+    transform: translateY(50%);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+/* Round scroll buttons */
+.scroll-btn {
+    
+    background-color: white;
+    color: #7ba100;
+    border: 2px solid #7ba100;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: transform 0.2s ease;
+}
 
-/* .testimobials-container{
+
+.scroll-btn:hover {
+  transform: scale(1.1);
+}
+
+
+
+.testimonials-container{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 340%);
     width: 75%;
     height: 550px;
-    background: rgb(106, 214, 106) no-repeat;
+    background: transparent, no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
+    border: 2px solid yellowgreen;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     margin-top: 20px;
 
-} */
-/* .contact-container{
+}
+
+.testimonials-container .textimonials-content{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 80px;   
+    transform: translateY(0%);
+    
+}
+.textimonials-content h1{
+    font-size: 50px;
+    color: yellowgreen;
+    line-height: 1;
+    transform: translateY(-50%);
+}
+
+.textimonials-content h3{
+    font-size: 20px;
+    color: yellowgreen;
+    line-height: 3;
+
+}
+
+.textimonials-content p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.textimonials-content .scroll-container{
+    display: flex;
+    overflow-x: auto;
+    gap: 1.2rem;
+    height: 75%;
+    scroll-behavior: smooth;
+    padding: 0.5rem;
+    scroll-snap-type: x mandatory ;
+    justify-content: flex-start;
+    /* border: 2px solid yellowgreen; */
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
+
+}
+
+.scroll-container .card{
+    top: 0;
+    left: 0;
+    width: 300px;
+    
+    height: 100%;
+    flex-shrink: 0;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 2px solid yellowgreen;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+}
+
+.contact-container{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 475%);
     width: 75%;
     height: 550px;
-    background: rgb(106, 214, 106) no-repeat;
+    background: transparent, no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
+    border: 2px solid yellowgreen;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
     margin-top: 20px;
-}  */
+} 
+
+.contact-container .contactContent{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:  45%;
+    height: 100%;
+    padding: 80px;
+    background: transparent, no-repeat;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.contactContent .text-sci h2{ 
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: center;
+    font-size: 40px;
+    color: yellowgreen;
+    
+}
+.contactContent .text-sci h2 span{
+    font-size: 30px;
+    width: 32px;
+}
+
+.contactContent .text-sci p{
+    text-align: left;
+    margin: 20px 0;
+}
+
+.contactContent .socials-icons a i{
+    font-size: 30px;
+    color: darkgreen;
+    margin-right: 10px;
+    transition: .5s ease;
+    padding-bottom: 25px;
+}
+
+ .contactContent .socials-icons a:hover i{
+    transform: scale(1.2);
+}
+
+
+
+.contact-container .contactBox{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 45%);
+    height: 100%;
+    /* border: 2px solid yellow; */
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.contactBox .fromBox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 75%;
+    background: traansparent;
+    transform: translate(15%, 15%);
+    border: 2px solid yellowgreen;
+    border-radius: 10px;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.1) ;
+}
+
+.fromBox h2 {
+    font-size: 32px;
+    text-align: center;
+    color: yellowgreen;
+}
+
+.fromBox .input-box{
+    position: relative;
+    width: 340px;
+    height: 50px;
+    border-bottom:2px solid yellowgreen;
+    margin: 20px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: yellowgreen;
+    font-weight: 500;
+    padding: right 28px; 
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s ease;
+    color: darkgreen;
+}
+
+.input-box textarea {
+   
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: yellowgreen;
+    font-weight: 500;
+    padding: right 28px, top 5px; 
+}
+.input-box input:focus~label,
+.input-box input:valid~label, .input-box textarea:focus~label,
+.input-box textarea:valid~label {
+    top: -5px;
+} 
+/* validation and input focus */
+
+.input-box .icons{
+    position: absolute;
+    top: 13px;
+    right: 0;
+    font-size: 19px;
+}
+
+
+.btn{
+    width:75% ;
+    height:45px ;
+    /* margin-top: 20px; */
+    background:rgb(64, 92, 10) ;
+    border:none ;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    color: azure;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+
+
+
+footer p{
+    color: azure;
+    background: #282828;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+}
